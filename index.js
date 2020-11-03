@@ -607,6 +607,10 @@ exports.addHexPrefix = function (str) {
     return str
   }
 
+  if (str.startsWith('atx') || str.startsWith('atp')) {
+    return str
+  }
+
   return exports.isHexPrefixed(str) ? str : '0x' + str
 }
 
