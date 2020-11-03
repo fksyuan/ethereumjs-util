@@ -14,7 +14,7 @@
     "test": "npm run test:node && npm run test:browser",
     "test:browser": "npm run build:dist && karma start karma.conf.js",
     "test:node": "npm run build:dist && istanbul test mocha -- --reporter spec",
-    "build:dist": "babel index.js --source-root ./ -d ./dist",
+    "build:dist": "babel index.js bech32.js segwit_addr.js --source-root ./ -d ./dist",
     "build:docs": "documentation build ./index.js --github --sort-order='alpha' -f md > ./docs/index.md"
   },
   "repository": {
@@ -109,8 +109,7 @@
     "keccak": "^1.0.2",
     "rlp": "^2.0.0",
     "safe-buffer": "^5.1.1",
-    "secp256k1": "^3.0.1",
-    "require-local": "^0.0.3"
+    "secp256k1": "^3.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
